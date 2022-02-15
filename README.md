@@ -1,24 +1,55 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# rails-blog-app
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+In this project, I created all controllers and views for my Blog app. 
 
-* System dependencies
+## Built with
 
-* Configuration
+- Rails
 
-* Database creation
+- HTML
 
-* Database initialization
+- Linters(Rubocop and Stylelint)
 
-* How to run the test suite
+## Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+` Navigate to your terminal`
 
-* Deployment instructions
+`git clone https://github.com/Ugboaja-Uchechi/rails-blog-app.git`
 
-* ...
+`cd rails-blog-app in that same terminal`
+
+`run code . to open in an IDE like VsCode`
+
+` run bundle install to couple all dependacies`
+
+`run rails s`
+
+## Author
+
+👤Ugboaja-Uchechi
+
+[GitHub](https://github.com/Ugboaja-Uchechi)
+
+[LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
+
+## 🤝Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page. Show your support
+
+## Give a ⭐️ if you like this project!
+
+## Acknowledgement:
+
+The idea was gotten from the ![](https://img.shields.io/badge/Microverse-blueviolet) Microverse Figma template.
+
+My partner also participated in this project.
+
+## 📝 License
+
+This project is MIT licensed.
