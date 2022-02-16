@@ -5,6 +5,10 @@ ruby '2.7.5'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+end
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
