@@ -4,7 +4,7 @@ RSpec.describe 'User', type: :request do
   describe 'GET #index' do
     before(:example) { get('/user') }
 
-    it "is a success" do
+    it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
     it "renders 'index' template" do
@@ -19,8 +19,7 @@ RSpec.describe 'User', type: :request do
   describe 'GET #show' do
     before(:example) { get '/user/:id' }
 
-
-    it "is a success" do
+    it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
 

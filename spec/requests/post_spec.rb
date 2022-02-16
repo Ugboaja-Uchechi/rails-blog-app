@@ -4,8 +4,7 @@ RSpec.describe 'Post', type: :request do
   describe 'GET #index' do
     before(:example) { get '/user/:user_id/post' }
 
-
-    it "should return " do
+    it 'should return ' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -18,11 +17,10 @@ RSpec.describe 'Post', type: :request do
     end
   end
 
-    describe 'GET #show' do
-      before(:example) { get '/user/:user_id/post/:id' }
+  describe 'GET #show' do
+    before(:example) { get '/user/:user_id/post/:id' }
 
-
-    it "should return 200" do
+    it 'should return 200' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -34,5 +32,4 @@ RSpec.describe 'Post', type: :request do
       expect(response.body).to include('Glee')
     end
   end
-
 end
