@@ -28,6 +28,21 @@ In this project, I created all controllers and views for my Blog app.
 
 `run rails s`
 
+## Tests
+
+To run tests
+
+Install rspec with:
+
+`bundle install`
+and
+
+`rails generate rspec:install`
+
+run the test with:
+
+`rspec spec`
+
 ## Author
 
 👤Ugboaja-Uchechi
