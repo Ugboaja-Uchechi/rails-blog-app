@@ -1,10 +1,10 @@
-<div>
-  <div>
-    <%= user.photo %>
+<div class="user-flex">
+  <div class="user-border">
+    <img src="<%= user.photo %>">
   </div>
-  <div 
+  <div class="user-border user-width">
     <h1><%= link_to user.name, user_path(user) %></h1>
-    <div>
+    <div class="user-border-p">
       <p>Number of posts: <%= user.postsCounter? %></p>
     </div>
   </div>

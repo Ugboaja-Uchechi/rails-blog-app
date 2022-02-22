@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-flex {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  /* width: 23rem; */
+  margin-top: 2rem;
+}
+
+.user-border {
+  border: 2px solid black;
+}
+
+.user-border h1 {
+  margin: 0.5rem 1rem;
+}
+
+.user-border-p {
+  margin: 0;
+  text-align: right;
+}
+
+.user-width {
+  width: 20rem;
+}
+
+/* users - bio */
+.bio {
+  width: 22rem;
+  border: 2px solid black;
+  margin-top: 2rem;
+}
+
+.single-post {
+  border: 2px solid black;
+  margin: 1rem 0;
+}
