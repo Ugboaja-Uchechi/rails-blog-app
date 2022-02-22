@@ -1,3 +1,17 @@
-<h1>Post#show</h1>
-<p>Find me in app/views/post/show.html.erb</p>
-<p>Glee</p>
+<%
+=begin%>
+ <section>
+  <div>
+    <h2><%= @post.title %></h2>
+    <p><%= @post.text %></p>
+    <div>
+       <b>comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter%> </b>
+    </div>
+  </div>
+  <div>
+    <%= render @post.comments %>
+  </div>  
+<%
+=end%>
+
+<%= render partial: "partials/singlepost", locals: { post: @post } %>

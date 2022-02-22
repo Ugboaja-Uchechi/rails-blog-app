@@ -1,3 +1,19 @@
-<h1>Post#index</h1>
-<p>Find me in app/views/post/index.html.erb</p>
-<p>Watch Euphoria</p>
+<%
+=begin%>
+ <section>
+  <%= render partial: 'user_display', locals: {user: @user} %>
+  <div>
+    <%= render @posts %>
+  </div>
+  <button>Pagination</button>
+</section> 
+<%
+=end%>
+
+<%= render partial: "partials/user", locals: { user: @user } %>
+<% @posts.each do |post| %>
+  <%= render partial: "partials/post", locals:{ post: post } %>
+  
+  <%# post comments %>
+  <%= render partial: "partials/comment", locals: { items: 5 } %>
+<% end %>

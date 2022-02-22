@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <p>Post #<%= post.id %></p>
+    <p>
+      <%= link_to post.title, user_post_path(post.author, post) %>
+    </p>
+  </div>
+  <div>
+    <p>Comments: <%= post.commentsCounter?%>, Likes: <%= post.likesCounter?%></p>
+  </div>
+</div>
