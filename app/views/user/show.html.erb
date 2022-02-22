@@ -1,25 +1,10 @@
-<%
-=begin%>
- <section>
-  <%= render partial: 'user_display', locals: {user: @user} %>
-  <div>
-    <h4>Bio</h4>
-    <p><%= @user.bio %></p>
-  </div>
-  <div>
-    <%= render @user.posts %>
-  </div>
-</section>  
-<%
-=end%>
-
-
 <%= render partial: "partials/user", locals: { user: @user } %>
 <%= render partial: "partials/bio" %>
 <% @user.three_recent_posts.each do |post| %>
   <%= render partial: "partials/post", locals:{ post: post } %>
 <% end %>
-
-<button>
-  <%= link_to 'See all Post', user_post_path(@user) %>
-</button>
+<div class="button">
+  <button>
+    <%= link_to 'See all Post', user_post_path(@user) %>
+  </button>
+</div>
