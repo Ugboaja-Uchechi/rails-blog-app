@@ -1,15 +1,3 @@
-<%
-=begin%>
- <section>
-  <%= render partial: 'user_display', locals: {user: @user} %>
-  <div>
-    <%= render @posts %>
-  </div>
-  <button>Pagination</button>
-</section> 
-<%
-=end%>
-
 <%= render partial: "partials/user", locals: { user: @user } %>
 <% @posts.each do |post| %>
   <%= render partial: "partials/post", locals:{ post: post } %>
