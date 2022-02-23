@@ -5,6 +5,6 @@
 <% end %>
 <div class="button">
   <button>
-    <%= link_to 'See all Post', user_post_path(@user) %>
+    <%= link_to 'See all Post', @user.id.to_s + '/post' %>
   </button>
 </div>

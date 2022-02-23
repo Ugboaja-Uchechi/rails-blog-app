@@ -1,7 +1,9 @@
 <%= render partial: "partials/user", locals: { user: @user } %>
-<% @posts.each do |post| %>
+<% @user.all_posts.each do |post| %>
+<%= link_to 'post/' + post.id.to_s, :remote => true do %>
+
   <%= render partial: "partials/post", locals:{ post: post } %>
-  
-  <%# post comments %>
-  <%= render partial: "partials/comment", locals: { items: 5 } %>
+  <%= render partial: "partials/comment", locals:{ post: post } %>
+  <% end %>
+
 <% end %>
