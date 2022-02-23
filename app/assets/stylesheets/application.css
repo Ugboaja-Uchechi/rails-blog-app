@@ -19,22 +19,30 @@ body {
   height: 100%;
 }
 
-.container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .user-flex {
   display: flex;
-  align-items: baseline;
-  justify-content: space-evenly;
-  /* width: 23rem; */
+  align-items: center;
+  justify-content: center;
   margin-top: 2rem;
+  /* margin-left: 5rem; */
+}
+
+.photo-width {
+  display: flex;
+  width: 10%;
+  height: 5.4rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
 }
 
 .user-border {
   border: 2px solid black;
+}
+
+i {
+  transform: scale(4);
 }
 
 .user-border h1 {
@@ -47,19 +55,29 @@ body {
 }
 
 .user-width {
-  width: 20rem;
+  width: 75%;
 }
 
 /* users - bio */
+
+.bio-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .bio {
-  width: 22rem;
+  width: 87.3%;
   border: 2px solid black;
   margin-top: 2rem;
+  /* margin-left: 2rem; */
 }
 
 .single-post {
+  width: 95%;
   border: 2px solid black;
   margin: 1rem 0;
+  margin-left: 2rem;
 }
 
 .button {
