@@ -77,10 +77,15 @@ a {
 /* Posts */
 
 .single-post {
-  width: 95%;
-  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem 0;
-  margin-left: 2rem;
+} 
+
+.single-post-width {
+  width: 87.3%;
+  border: 2px solid black;
 }
 
 .single-post p {
@@ -103,4 +108,8 @@ a {
 button {
   box-shadow: 3px 2px;
   border: 2px solid black;
+}
+
+.no-margin {
+  margin-top: 1rem;
 }
