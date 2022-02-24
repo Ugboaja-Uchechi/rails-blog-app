@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
   def self.update_post_count(id)
     user = User.find(id)
-    user.postsCounter =Post.where(users_id: id).count
+    user.postsCounter = Post.where(users_id: id).count
     user.save
   end
 
@@ -16,5 +16,4 @@ class Post < ApplicationRecord
   def self.all_comments(id)
     Comment.where(posts_id: id)
   end
-
 end
