@@ -1,0 +1,27 @@
+<div class="single-post">
+  <div class="single-post-width">
+    <div>
+      <p> <%= post.title %> by <%= @user.name %></p>
+      <p>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
+    </div>
+    <div>
+      <p>
+      <%= post.text %>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+  <div>
+  <%# post comments %>
+ <div class="bio-flex">
+  <div class="bio no-margin">
+   <% Post.all_comments(post.id).each do |comment| %>
+    <p>
+      <%= @user.name %>: <%= comment.text %>
+    </p>
+    <% end %>
+  </div>
+</div> 
+  </div>

@@ -3,11 +3,17 @@ class Post < ApplicationRecord
   has_many :comments, class_name: 'Comment', foreign_key: 'posts_id'
   has_many :likes, class_name: 'Like', foreign_key: 'posts_id'
 
-  def update_post_count
-    users.increment!(:posts_counter)
+  def self.update_post_count(id)
+    user = User.find(id)
+    user.postsCounter = Post.where(users_id: id).count
+    user.save
   end
 
-  def five_recent_comments
-    comments.order(created_at: :desc).limit(5)
+  def self.five_recent_comments(id)
+    Comment.where(posts_id: id).limit(5)
+  end
+
+  def self.all_comments(id)
+    Comment.where(posts_id: id)
   end
 end
