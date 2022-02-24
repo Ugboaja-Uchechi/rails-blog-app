@@ -1,9 +1,9 @@
-<div class="bio-flex">
+ <div class="bio-flex">
   <div class="bio no-margin">
-   <% (1..5).each_with_index do |index| %>
+   <% Post.five_recent_comments(post.id).each do |comment| %>
     <p>
-      Username: Comment <%= index %>
+      <%= @user.name %>: <%= comment.text %>
     </p>
     <% end %>
   </div>
-</div>
+</div> 

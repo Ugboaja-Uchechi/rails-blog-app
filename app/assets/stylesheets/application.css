@@ -30,8 +30,9 @@ body {
   border: 2px solid black;
 }
 
-i {
-  transform: scale(4);
+.image {
+  width: 10rem;
+  height: 7rem;
 }
 
 .user-border h1 {

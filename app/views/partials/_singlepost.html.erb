@@ -1,18 +1,12 @@
 <div class="single-post">
   <div class="single-post-width">
     <div>
-      <p>Post #<%= post.id %> by username <%= post.author %></p>
-      <p>Comments: x, Likes: y</p>
+      <p> <%= post.title %> by <%= @user.name %></p>
+      <p>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
     </div>
     <div>
       <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum totam possimus saepe. Dignissimos earum minima beatae nulla quo ab voluptatibus! Voluptatum natus commodi consequuntur ab error, repudiandae necessitatibus laudantium nobis.
-      Officiis quam quia sed vero natus repellat dolores ipsam, adipisci nam sunt odio eaque praesentium unde maxime repellendus possimus dolorum amet ipsum aut dicta molestias non nihil quibusdam! Earum, non 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo alias, corporis, placeat, itaque consequatur aliquid atque quia labore autem accusamus sed a quisquam explicabo iure eos voluptatum inventore reprehenderit quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corporis. Non, ab quisquam quibusdam optio omnis velit magnam, quo natus temporibus ipsa numquam unde exercitationem, aliquid animi nam laborum nulla.
-      <br />
-      <br />
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa excepturi harum quasi, praesentium autem repellat, mollitia at inventore eius odio delectus voluptatum, itaque fugiat ratione! Cumque inventore doloribus impedit nisi.
-      Laudantium iusto voluptate, cupiditate eligendi tempore autem. Ipsum, tempora. Provident, eaque aut. 
+      <%= post.text %>
       </p>
     </div>
   </div>
@@ -21,5 +15,13 @@
 
   <div>
   <%# post comments %>
-    <%= render partial: "partials/comment", locals: { items: 10 } %>
+ <div class="bio-flex">
+  <div class="bio no-margin">
+   <% Post.all_comments(post.id).each do |comment| %>
+    <p>
+      <%= @user.name %>: <%= comment.text %>
+    </p>
+    <% end %>
+  </div>
+</div> 
   </div>

@@ -3,7 +3,7 @@
 <%= link_to 'post/' + post.id.to_s, :remote => true do %>
 
   <%= render partial: "partials/post", locals:{ post: post } %>
-  <%= render partial: "partials/comment", locals:{ post: post } %>
+  <%= render partial: "partials/comment", locals:{ post: post, user: @user } %>
   <% end %>
 
 <% end %>

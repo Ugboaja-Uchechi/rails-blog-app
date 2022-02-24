@@ -1,13 +1,13 @@
 <div class="bio-flex">
   <div class="bio">
     <div>
-      <p>Post #<%= post.id %></p>
+      <p><%= post.title %></p>
       <p>
-        <%= link_to post.title, user_post_path(post.author, post) %>
+        <%= link_to post.text, user_post_path(post.author, post) %>
       </p>
     </div>
     <div class="align-left">
-      <p>Comments: <%= post.commentsCounter%>5, Likes: <%= post.likesCounter?%></p>
+      <p>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
     </div>
   </div>
 </div>
