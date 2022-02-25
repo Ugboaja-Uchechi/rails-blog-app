@@ -12,7 +12,7 @@
   </div>
 
   <%= form_with  class: 'form',
-    model: @post, url: user_path(@current_user, @post.users_id) do |form| %>
+    model: @post, url: user_post_index_path do |form| %>
     <div>
       <p>Title:</p>
       <%= form.text_field :title, class: 'form' %>

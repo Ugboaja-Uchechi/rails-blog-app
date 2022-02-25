@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   
     def create
       @comment = current_user.comments.new(comment_params)
+      @comment.update_comments_counter
       reference_params
   
       if @comment.save

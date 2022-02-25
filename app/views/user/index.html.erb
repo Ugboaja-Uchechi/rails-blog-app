@@ -1,4 +1,8 @@
-<p><%= link_to "Add new post", new_user_post_path(@current_user, @post) %></p>
+<%
+=begin%>
+ 
+<%
+=end%>
 
 <% @users.each do |user| %>
   <%= render partial: "partials/user",  locals: { user: user } %>

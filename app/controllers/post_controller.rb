@@ -12,19 +12,29 @@ class PostController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.new
     @current_user = current_user
   end
 
   def create
     @post = current_user.posts.new(post_params)
+    @post.commentsCounter = 1
+    @post.likesCounter = 1
+    @post.update_post_count
 
+    respond_to do |format|
+      format.html do
     if @post.save
-      flash[:success] = "Post created successfully"
-      redirect_to user_path(@post.author_id)
-    else
-      render :new
+          # Post.count_post(params[:user_id])
+          flash[:success] = 'Post created successfully'
+          redirect_to user_post_path(current_user.id, @post.id)
+        else
+          flash.now[:error] = 'Error: Post could not be created'
+          render :new, locals: { post: @post }
+        end
+      end
     end
+
   end
 
   private
