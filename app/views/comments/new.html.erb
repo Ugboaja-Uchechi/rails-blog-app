@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <%
+=begin%>
+ <p>
+      <%= link_to "Go Back", user_posts_path(@comment.author_id) %>
+    </p> 
+<%
+=end%>
+    <h3>Enter New Comment</h3>
+  </div>
+
+  <%= form_with class: 'form',
+    model: @comment,
+    url: user_post_comments_path(@comment.author, @comment.posts_id) do |form| %>
+    <p>Comment:</p> 
+    <%= form.text_area :text, class: 'form-textarea' %>
+    <%= form.submit "Submit Comment", class: 'button' %>
+  <% end %>
+</div> 

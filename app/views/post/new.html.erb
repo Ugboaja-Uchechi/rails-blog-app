@@ -1,0 +1,26 @@
+<div>
+
+  <div>
+    <%
+=begin%>
+ <p>
+      <%= link_to "Go Back", users_path %>
+    </p> 
+<%
+=end%>
+    <h3>Enter new post</h3>
+  </div>
+
+  <%= form_with  class: 'form',
+    model: @post, url: user_path(@current_user, @post.users_id) do |form| %>
+    <div>
+      <p>Title:</p>
+      <%= form.text_field :title, class: 'form' %>
+    </div>
+    <div>
+      <p>Text:</p>
+      <%= form.text_area :text, class: 'form' %>
+    </div>
+    <%= form.submit "Submit Post", class: 'button' %>
+  <% end %>
+</div> 
