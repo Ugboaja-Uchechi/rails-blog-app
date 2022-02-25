@@ -1,12 +1,12 @@
 <div class="single-post">
   <div class="single-post-width">
     <div>
-      <p> <%= post.title %> by <%= @user.name %></p>
-      <p>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></p>
+      <p> <%= @post.title %> by <%= @user.name %></p>
+      <p>Comments: <%= @post.commentsCounter %>, Likes: <%= @post.likesCounter %></p>
     </div>
     <div>
       <p>
-      <%= post.text %>
+      <%= @post.text %>
       </p>
     </div>
   </div>

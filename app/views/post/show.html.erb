@@ -1,1 +1,17 @@
+<p>
+
+  <a><%= link_to "Add new comment", new_user_post_comment_path(@post.author, @post) %></a>
+
+    <%= form_with url: new_user_post_path(@user.id, @post.id) do |form| %>
+ 
+    <%= form.submit "Like post", class: 'button' %>
+  <% end %>
+<%
+=begin%>
+ 
+  <%= link_to "Like Post", user_post_likes_path(@user.id, @post.id), method: :post, class:"button" %> 
+<%
+=end%>
+</p>
+
 <%= render partial: "partials/singlepost", locals: { post: @post } %>
