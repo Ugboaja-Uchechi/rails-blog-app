@@ -24,7 +24,7 @@ In this project, I created all controllers and views for my Blog app.
 
 `run code . to open in an IDE like VsCode`
 
-` run bundle install to couple all dependacies`
+` run bundle install to couple all dependencies`
 
 `run rails s`
 
