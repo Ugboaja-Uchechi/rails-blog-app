@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     reference_params
 
     if @comment.save
-      flash[:notice] = "Comment created"
+      flash[:notice] = 'Comment created'
       redirect_to user_post_path(@comment.author, @comment.posts_id)
     else
       render :new

@@ -20,7 +20,7 @@ class PostController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      flash[:notice] = "Post created"
+      flash[:notice] = 'Post created'
       redirect_to user_path(@post.author)
     else
       render :new
