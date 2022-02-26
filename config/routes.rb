@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  # get 'comments/new'
 
   root "user#index"
 
   resources :user, only: [:index, :show] do
-    resources :post, only: [:index, :show]
+    resources :post, only: [:index, :show, :new, :create] do
+      resources :comments, only: [:new, :create]
+      resources :likes, only: [:create]
+    end
   end
 
 

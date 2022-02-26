@@ -1,1 +1,4 @@
+  <a class="mx-5"><%= link_to "Add new comment", new_user_post_comment_path(@post.author, @post) %></a>
+  <%= button_to "Like Post", user_post_likes_path(@post.author, @post), method: :post, class:"button border-black" %>
+
 <%= render partial: "partials/singlepost", locals: { post: @post } %>

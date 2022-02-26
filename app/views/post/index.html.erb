@@ -1,3 +1,4 @@
+
 <%= render partial: "partials/user", locals: { user: @user } %>
 <% @user.all_posts.each do |post| %>
 <%= link_to 'post/' + post.id.to_s, :remote => true do %>
