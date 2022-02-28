@@ -1,3 +1,10 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
-<p>Harry Potter</p>
+<%= render partial: "partials/user", locals: { user: @user } %>
+<%= render partial: "partials/bio", locals: { user: @user } %>
+<% @user.three_recent_posts.each do |post| %>
+  <%= render partial: "partials/post", locals:{ post: post } %>
+<% end %>
+<div class="button">
+  <button>
+    <%= link_to 'See all Post', @user.id.to_s + '/post' %>
+  </button>
+</div>

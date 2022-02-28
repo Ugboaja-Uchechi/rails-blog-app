@@ -1,0 +1,9 @@
+ <div class="bio-flex">
+  <div class="bio no-margin">
+   <% Post.five_recent_comments(post.id).each do |comment| %>
+    <p>
+      <%= @user.name %>: <%= comment.text %>
+    </p>
+    <% end %>
+  </div>
+</div> 
