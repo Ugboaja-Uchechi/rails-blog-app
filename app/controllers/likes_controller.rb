@@ -4,6 +4,9 @@ class LikesController < ApplicationController
     new_author = User.find(params[:users_id])
     @like = Like.new(author: new_author, posts: new_post)
 
-    redirect_to user_post_comments_path(@comment.author, @comment.posts_id) if @like.save
+    if @like.save
+      flash[:notice] = "You liked this post."
+      redirect_to user_post_comments_path(@comment.author, @comment.posts_id)
+    end
   end
 end
