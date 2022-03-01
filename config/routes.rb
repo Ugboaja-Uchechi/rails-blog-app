@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'likes/_likes'
-  get 'comments/new'
 
   root "user#index"
 
