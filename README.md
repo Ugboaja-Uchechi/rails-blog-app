@@ -26,7 +26,15 @@ In this project, I created all controllers and views for my Blog app.
 
 ` run bundle install to couple all dependencies`
 
-`run rails s`
+Run:
+
+`rails db:create`
+
+`rails db:migrate`
+
+`rails db:seed`
+
+before running `rails s` in your console to view the website
 
 ## Tests
 
