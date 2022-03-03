@@ -6,11 +6,11 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  def self.three_recent_posts(id)
+  def three_recent_posts
     Post.where(users_id: id).limit(3)
   end
 
-  def self.all_posts(id)
-    Post.where(users_id: id)
+  def all_posts
+    posts.order(created_at: :desc)
   end
 end
