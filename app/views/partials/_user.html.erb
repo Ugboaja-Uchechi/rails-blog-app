@@ -5,7 +5,7 @@
   <div class="user-border user-width">
     <h1><%= link_to user.name, user_path(user) %></h1>
     <div class="user-border-p">
-      <p>Number of posts: <%= user.postsCounter%></p>
+      <p>Number of posts: <%= user.postsCounter || 0%></p>
     </div>
   </div>
 </div>
