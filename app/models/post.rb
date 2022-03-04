@@ -3,6 +3,10 @@ class Post < ApplicationRecord
   has_many :comments, class_name: 'Comment', foreign_key: 'posts_id'
   has_many :likes, class_name: 'Like', foreign_key: 'posts_id'
 
+  validates :title, length: { maximum: 250 }, presence: true
+  validates :likesCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :commentsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def self.update_post_count(id)
     user = User.find(id)
     user.postsCounter = Post.where(users_id: id).count
