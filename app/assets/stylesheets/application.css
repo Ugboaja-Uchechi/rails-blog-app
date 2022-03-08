@@ -115,8 +115,7 @@ button {
   margin-top: 1rem;
 }
 
-.new_user,
-.cancel {
+.new_user{
   display: flex;
   flex-direction: column;
   justify-content: center;
