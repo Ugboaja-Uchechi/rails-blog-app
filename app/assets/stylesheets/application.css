@@ -114,3 +114,68 @@ button {
 .no-margin {
   margin-top: 1rem;
 }
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user_email,
+#user_password,
+input[type=submit] {
+  width: 75%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input[type=text],
+input[type=password],
+textarea,
+button {
+  width: 75%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+textarea {
+  height: 4rem;
+}
+
+input[type=submit],
+button {
+  box-shadow: 3px 2px;
+}
+
+.actions,
+.button_to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
