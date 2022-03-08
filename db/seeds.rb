@@ -12,5 +12,3 @@ fourth_user = User.create(name: 'Dumbledore', photo: 'https://www.looper.com/img
 
 dumbledore_post = Post.create(author: third_user, title: 'Harry', text: 'We must defeat he who shall not be made')
 lloyd_post = Post.create(author: fourth_user, title: 'Swanson', text: 'We need to find her')
-
-Comment.create(post: dumbledore_post, author: third_user, text: 'Who is that' )
