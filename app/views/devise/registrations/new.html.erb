@@ -1,5 +1,6 @@
-<h2>Sign up</h2>
-
+<div class="sign-up">
+  <h2>Sign up</h2>
+</div>
 <%= form_for(resource, as: resource_name, html: {'data-turbo' => "false"}, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -19,7 +20,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
