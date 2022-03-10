@@ -11,9 +11,12 @@ RSpec.describe 'Post Index', type: :feature do
       fill_in 'Password', with: '123456789'
       click_button 'Log in'
 
-      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likesCounter: '0', commentsCounter: '0')
-      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likesCounter: '0', commentsCounter: '0')
-      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likesCounter: '0', commentsCounter: '0')
+      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likesCounter: '0',
+                            commentsCounter: '0')
+      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likesCounter: '0',
+                            commentsCounter: '0')
+      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likesCounter: '0',
+                            commentsCounter: '0')
 
       @comment1 = Comment.create!(post: @post1, author: @user1, text: 'test title 1')
       @comment2 = Comment.create!(post: @post1, author: @user1, text: 'test comment 2')
