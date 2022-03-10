@@ -1,8 +1,6 @@
-<%
-=begin%>
+
  <p class="card-title w-auto"><%= link_to "Add new post", new_user_post_path(@current_user) %></p> 
-<%
-=end%>
+
 
 <% @users.each do |user| %>
   <%= render partial: "partials/user",  locals: { user: user } %>
