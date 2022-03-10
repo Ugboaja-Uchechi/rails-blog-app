@@ -5,7 +5,7 @@
     <h3 class="card-title">Enter new post</h3>
   </div>
 
-  <%= form_with  class: 'form border-black flex flex-col w-full',
+  <%= form_with  class: 'form border-black flex flex-col w-full', html: {'data-turbo' => "false"},
     model: @post, url: user_post_index_path(@current_user) do |form| %>
     <div>
       <p class="text-lg">Title:</p>
