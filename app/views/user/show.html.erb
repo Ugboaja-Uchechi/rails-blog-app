@@ -4,7 +4,7 @@
   <%= render partial: "partials/post", locals:{ post: post } %>
 <% end %>
 <div class="button">
-  <button>
-    <%= link_to 'See all Post', @user.id.to_s + '/post' %>
-  </button>
+  <%= link_to  @user.id.to_s + '/post', :remote => true do %>
+    <input type="button" value="See all posts">
+  <% end %>
 </div>
