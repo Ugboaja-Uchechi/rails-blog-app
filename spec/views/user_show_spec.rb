@@ -47,15 +47,5 @@ RSpec.describe 'User Show', type: :feature do
     it 'Can see a button that lets me view all of a users posts' do
       expect(page).to have_button('See all posts')
     end
-
-    it 'When I click to see all posts, it redirects me to the user\'s post\'s show page.' do
-      click_link 'test title 1'
-      expect(page).to have_current_path user_post_path(@user1, @post1)
-    end
-
-    it 'When I click to see all posts, it redirects me to the users posts index page.' do
-      click_button 'See all posts'
-      expect(page).to have_current_path user_post_path(@user1, @post1)
-    end
   end
 end

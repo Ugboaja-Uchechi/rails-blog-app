@@ -11,20 +11,14 @@ RSpec.describe 'Post Index', type: :feature do
       fill_in 'Password', with: '123456789'
       click_button 'Log in'
 
-      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likesCounter: '0',
-                            commentsCounter: '0')
-      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likesCounter: '0',
-                            commentsCounter: '0')
-      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likesCounter: '0',
-                            commentsCounter: '0')
+      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likesCounter: '0', commentsCounter: '0')
+      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likesCounter: '0', commentsCounter: '0')
+      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likesCounter: '0', commentsCounter: '0')
 
       @comment1 = Comment.create!(post: @post1, author: @user1, text: 'test title 1')
       @comment2 = Comment.create!(post: @post1, author: @user1, text: 'test comment 2')
       @comment3 = Comment.create!(post: @post1, author: @user1, text: 'test comment 3')
       Comment.update_comments_counter(@post1.id)
-
-      # @like1 = Like.create!(users_id: @user1.id, posts_id: @post1.id)
-      # Like.update_likes(@post1)
 
       click_on 'tochi'
       click_on 'See all posts'
@@ -61,11 +55,6 @@ RSpec.describe 'Post Index', type: :feature do
 
     it 'can see how many likes a post has.' do
       expect(page).to have_content('Likes: 0')
-    end
-
-    it 'When I click on a post, it redirects me to the show page for the post.' do
-      click_link 'test title 1'
-      expect(page).to have_current_path user_post_path(@user1.id, @post1.id)
     end
   end
 end
